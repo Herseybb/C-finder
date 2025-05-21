@@ -39,7 +39,8 @@ if user_input:
 
             detail = detail_res.json()["drinks"][0]
             name = detail["strDrink"]
-            image = detail["strDrinkThumb"]
+            # image = detail["strDrinkThumb"]
+            image = detail["strDrinkThumb"].replace("\\/", "/")
             instructions = detail.get("strInstructions", "No instructions available.")
 
             # Get ingredients
